@@ -9,6 +9,12 @@ const sendNotification = async (registrationToken, title, body) => {
         body: body,
       },
       token: registrationToken, // The recipient's device registration token
+
+      android: {
+        priority: 'high',
+      }
+
+
     };
   
     try {

@@ -8,6 +8,7 @@ const sendNotification=require('./sendNotification')
 app.get('/not',async(req,res)=>{
     let body=req.body
     let {title,token,message}=body
+    console.log(token)
     sendNotification(token,title,message)
     res.send('notication is send to user')
 
